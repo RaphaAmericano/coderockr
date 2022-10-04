@@ -1,5 +1,17 @@
+// Fonts
+$main-font: 'Rubik', sans-serif;
+
+// Colors
 $primary-color: rgba(241, 161, 10, 1);
 $secondary-color: rgba(52, 35, 3, 1);
+
+// layout
 $main-shadow: 0 4px 4px 0 rgba(0,0,0, 0.25);
-// linear-gradient(90deg, #F1A10A 0%, #342303 100%)
 $main-gradient: linear-gradient(90deg, $primary-color 0%, $secondary-color 100%);
+
+
+// Breakpoints 
+$desktop: 1280px;
+$tablet-large: 1024px;
+$tablet: 768px;
+$mobile-large: 435px;
