@@ -1,0 +1,5 @@
+$primary-color: rgba(241, 161, 10, 1);
+$secondary-color: rgba(52, 35, 3, 1);
+$main-shadow: 0 4px 4px 0 rgba(0,0,0, 0.25);
+// linear-gradient(90deg, #F1A10A 0%, #342303 100%)
+$main-gradient: linear-gradient(90deg, $primary-color 0%, $secondary-color 100%);
