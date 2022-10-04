@@ -1,0 +1,37 @@
+@import "../../assets/styles/variables";
+
+.header {
+    color: #FFF;
+    background-color: $dark-color;
+    display: flex;
+    justify-content: space-around;
+    .heading {
+        font-size: 36px;
+        line-height: 42.66px;
+    }
+}
+.nav {
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        line-height: 38px;
+        min-width: 318px;
+        li {
+
+            a.navItem, button.navItem {
+                font-size: 32px;
+                font-weight: 500;
+                color: $light-color;
+            }
+            a.navItem {
+                text-decoration: none;
+            }
+            button.navItem {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
