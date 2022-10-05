@@ -1,2 +1,2 @@
-import * as postSchemes from "./post";
-export { postSchemes };
+import * as postSchemas from "./post";
+export { postSchemas };
