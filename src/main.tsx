@@ -1,13 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from "react-router-dom";
-
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from "react-query/devtools";
 import App from './App'
+
+const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter basename="coderockr">
-      <App />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter basename="coderockr">
+        <App />
+      </BrowserRouter>
+      <ReactQueryDevtools initialIsOpen={false}/>
+    </QueryClientProvider>
   </React.StrictMode>
 )
