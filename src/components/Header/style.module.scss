@@ -1,10 +1,12 @@
 @import "../../assets/styles/variables";
 
 .header {
+    height: 100px;
     color: #FFF;
     background-color: $dark-color;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     .heading {
         font-size: 36px;
         line-height: 42.66px;
