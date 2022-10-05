@@ -6,7 +6,6 @@ type IProps = postSchemas.Post;
 
 export default function PostCard(props: IProps){
     const { author, title, article, id, imageUrl } = props;
-    console.log(article);
     function resumeArticle(article: string){
         return article.split('</p>')[0].replace("<p>", "");
     }

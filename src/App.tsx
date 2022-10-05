@@ -11,7 +11,7 @@ function App() {
   function openContactModal(){
     console.log("Open contact modal")
   }
-  const menu = [{ to: "/", text: "Posts", isLink: true }, {  text: "Contact", clickFn: openContactModal }]
+  const menu = [{ to: "/", text: "Posts", isLink: true }, { text: "Contact", clickFn: openContactModal }]
   return (
     <>
       <Header title={"Rockr Blog"} menu={menu}/>

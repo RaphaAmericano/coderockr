@@ -7,9 +7,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100vw;
     .heading {
         font-size: 36px;
         line-height: 42.66px;
+        @media screen and (max-width: $mobile-large) {
+            font-size: 24px;
+        }
     }
 }
 .nav {
@@ -19,12 +23,18 @@
         list-style-type: none;
         line-height: 38px;
         min-width: 318px;
+        @media screen and (max-width: $mobile-large) {
+            min-width: 160px;
+        }
         li {
 
             a.navItem, button.navItem {
                 font-size: 32px;
                 font-weight: 500;
                 color: $light-color;
+                @media screen and (max-width: $mobile-large) {
+                    font-size: 18px;
+                }
             }
             a.navItem {
                 text-decoration: none;
@@ -33,6 +43,8 @@
                 background-color: transparent;
                 border: none;
                 cursor: pointer;
+                display: inline;
+                line-height: 38px;
             }
         }
     }
