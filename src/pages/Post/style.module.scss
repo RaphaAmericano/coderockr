@@ -5,16 +5,19 @@
     display: flex;
     justify-content: center;
     width: 100vw;
-    @media screen and (max-width: $tablet ) {
-        padding: 15px;
+    @media screen and (max-width: $mobile-large ) {
+        padding: 0 15px;
     }
 }
 .container {
     @include container;
-    margin: 100px 218px;
     background-color: $light-color;
+    margin: 100px 0;
+    @media screen and (max-width: $mobile-large ) {
+        margin: 15px 0;
+    }
     @media screen and (max-width: $tablet ) {
-        margin: unset;
+        margin: 43px 0;
     }
 }
 

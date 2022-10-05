@@ -21,7 +21,6 @@ export default function Header(props: IProps) {
           <ul>
               {menu.map((item) => <li key={item.text}>
                   { item.to ? <Link to={item.to} className={scss.navItem}>{item.text}</Link> : <button onClick={item.clickFn} className={scss.navItem}>{item.text}</button> }
-                  
                   </li> )}
           </ul>
           </nav>}

@@ -1,8 +1,18 @@
 @import "./variables";
 
 @mixin container {
-    width: 1280px;
-    @media screen and (max-width: $tablet ) {
-        width: 100vw;
+    width: 100vw;
+    
+    @media screen and (min-width: $desktop-large ) {
+        width: 1280px;
+    }
+    @media screen and (min-width: $desktop ) and (max-width: $desktop-large ) {
+        width: 960px;
+    }   
+    @media screen and (min-width: $tablet-large ) and (max-width: $desktop ) {
+        width: 853px;
+    }   
+    @media screen and (min-width: $tablet ) and (max-width: $tablet-large ) {
+        width: 682px;
     }   
 }
