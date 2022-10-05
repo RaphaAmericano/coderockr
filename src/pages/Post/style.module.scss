@@ -1,0 +1,65 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+
+.main {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.container {
+    @include container;
+    margin: 100px 218px;
+    background-color: $light-color;
+}
+
+.header {
+    display: flex;
+    .imageBlock {
+        flex-basis: 640px;
+        img {
+            width: 100%;
+        }
+    }
+    .textBlock {
+        padding: 120px;
+        flex-basis: 640px;
+        display: flex;
+        flex-direction: column;
+        .date {
+            font-size: 18px;
+            line-height: 25.6px;
+            color: #032937;
+            margin-bottom: 44px;
+        }
+        .author {
+            margin-bottom: 61px;
+            a {
+                color: $dark-color;
+                font-size: 24px;
+                line-height: 34px;
+                text-decoration: none;
+                transition:all 0.3s ease;
+                &:hover {
+                    transition:all 0.3s ease;
+                    color: $primary-color;
+                }
+            }
+        }
+        h1 {
+            color: $primary-color;
+            font-size: 36px;
+            line-height: 42.66px;
+        }
+    }
+}
+.article {
+    padding: 124px 250px 168px 250px;
+    p {
+        font-size: 24px;
+        line-height: 34.13px;
+        margin-bottom: 1em;
+        &:last-child {
+            margin-bottom: unset;
+        }
+    }
+}
