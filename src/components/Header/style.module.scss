@@ -18,20 +18,19 @@
             line-height: 42.66px;
         }
         @media screen and (max-width: $mobile-large) {
-        
             .heading {
                 font-size: 24px;
             }
         }
     }
-    @media screen and (max-width: $mobile-large) {
+    @media screen and (max-width: $tablet) {
         padding: 0 15px;
     }
 }
 .nav {
     ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         list-style-type: none;
         line-height: 38px;
         min-width: 318px;
