@@ -1,19 +1,31 @@
+@import "../../assets/styles/mixins";
 @import "../../assets/styles/variables";
 
 .header {
-    height: 100px;
-    color: #FFF;
-    background-color: $dark-color;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     width: 100vw;
-    .heading {
-        font-size: 36px;
-        line-height: 42.66px;
-        @media screen and (max-width: $mobile-large) {
-            font-size: 24px;
+    display: flex;
+    justify-content: center;
+    background-color: $dark-color;
+    .container {
+        @include container;
+        height: 100px;
+        color: #FFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .heading {
+            font-size: 36px;
+            line-height: 42.66px;
         }
+        @media screen and (max-width: $mobile-large) {
+        
+            .heading {
+                font-size: 24px;
+            }
+        }
+    }
+    @media screen and (max-width: $mobile-large) {
+        padding: 0 15px;
     }
 }
 .nav {
