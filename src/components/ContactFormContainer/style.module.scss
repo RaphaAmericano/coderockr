@@ -11,6 +11,9 @@
             height: 28px;
         }
     }
+    @media screen and (max-width: $tablet) {
+        width: 100vw;
+    }
 }
 .heading {
     h3 {
