@@ -1,0 +1,21 @@
+@import "./../../assets/styles/variables";
+@import "./../../assets/styles/mixins";
+
+.textInput {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    label {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 34.13px;
+    }
+    input {
+        width: 100%;
+        padding: 16px 18px;
+        border: 1px solid $input-border-color;
+        border-radius: 4px;
+        font-size: 24px;
+        @include inputPlaceholder;
+    }
+}

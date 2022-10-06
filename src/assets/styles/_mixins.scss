@@ -16,3 +16,9 @@
         width: 682px;
     }   
 }
+
+@mixin inputPlaceholder {
+    &::placeholder {
+        color: $gray-color;
+    }
+}
