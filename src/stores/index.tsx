@@ -11,7 +11,7 @@ export function useStores(){
     return useContext(storesCtx);
 }
 
-export function StoresProvider(props: PropsWithChildren<ReactNode>){
+export function StoresProvider(props: PropsWithChildren){
     const modalStore = useModal();
     return <storesCtx.Provider value={{ modalStore }}>{props.children}</storesCtx.Provider>
 }
