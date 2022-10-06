@@ -13,5 +13,5 @@ export function useStores(){
 
 export function StoresProvider(props: PropsWithChildren<ReactNode>){
     const modalStore = useModal();
-    return <storesCtx.Provider value={{ modalStore }}>{props.children}</storesCtx.storesCtx.Provider>
+    return <storesCtx.Provider value={{ modalStore }}>{props.children}</storesCtx.Provider>
 }
