@@ -10,3 +10,8 @@
 body, html {
     background: $main-gradient;
 }
+button {
+    background-color: transparent;
+    border: 0px solid transparent;
+    cursor: pointer;
+}
