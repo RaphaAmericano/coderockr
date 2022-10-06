@@ -1,3 +1,3 @@
 import * as dateHelpers from "./date";
-
-export { dateHelpers }
+import * as maskHelpers from "./mask";
+export { dateHelpers, maskHelpers }

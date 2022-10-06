@@ -18,9 +18,9 @@ const defaultValues: IFields = {
 
 const schema = yup.object({
     name: yup.string().required("Fill your full name"),
-    email: yup.string().email().required("Fill a valid e-mail"),
-    phone: yup.string().trim().matches(/^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/, "Fill a valid phone").required("Fill your phone"),
-    post: yup.string().required()
+    email: yup.string().email("Email must be a valid e-mail").required("Fill a valid e-mail"),
+    phone: yup.string().trim().matches(/(\(?\d{2}\)?\s)?([8-9]{1})?(\d{3,4}\-\d{4})/g, "Fill a valid phone").required("Fill your phone"),
+    post: yup.string().required("Post is a required field")
 });
 
 export function useContactForm(){
