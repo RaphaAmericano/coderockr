@@ -1,7 +1,10 @@
-import { useCallback, useState } from "react";
+import { ReactNode, useCallback, useState } from "react";
+
 
 export function useModal(){
     const [open, setOpen] = useState(false);
+    const [children, setChildren] = useState<ReactNode | null>(null);
+
     const openModal = useCallback(() => {
        setOpen(true); 
     },[]);
@@ -10,5 +13,5 @@ export function useModal(){
         setOpen(false); 
      },[]);
 
-    return { open, openModal, closeModal }
+    return { open, openModal, closeModal, children, setChildren }
 }
