@@ -1,0 +1,22 @@
+@import "./../../assets/styles/variables";
+.content {
+    background-color: $light-color;
+    padding: 52px 52px;
+    width: 810px;
+    .closeContent {
+        display: flex;
+        justify-content: flex-end;
+        img {
+            width: 28px;
+            height: 28px;
+        }
+    }
+}
+.heading {
+    h3 {
+        color: $primary-color;
+        text-align: center;
+        font-size: 36px;
+        line-height: 42.66px;
+    }
+}
