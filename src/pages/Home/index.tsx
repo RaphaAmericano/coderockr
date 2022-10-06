@@ -9,5 +9,5 @@ export default function Home() {
   const { data } = postQueries.useGetPosts({ limit, page });
   if(!data) return null;
   
-  return <main className={scss.container}>{data.map((post) => <PostCard key={post.id} {...post}/>)}</main>;
+  return <main className={scss.container}>{data.map((post, i) => <PostCard key={post.id} odd={i % 2 === 0 } {...post}/>)}</main>;
 }
