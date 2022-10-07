@@ -9,6 +9,9 @@
         padding: 15px;
         gap: 15px 0;
     }
+    @media screen and (min-width: $tablet) and (max-width: $tablet-large){
+        padding: 60px ;
+    }
     .loader {
         flex-basis: 100%;
         flex-grow: 1;
