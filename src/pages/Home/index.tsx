@@ -9,10 +9,12 @@ export default function Home() {
   const [limit, setLimit] = useState(6);
   const [page, setPage] = useState(1);
   const [posts, setPosts] = useState<postSchemas.Post[]>([]);
-  const { data, isLoading, isFetching, isRefetching } = postQueries.useGetPosts(
-    { limit, page }
-  );
+  // const { data, isLoading, isFetching, isRefetching } = postQueries.useGetPosts(
+  //   { limit, page }
+  // );
 
+  const { data, hasNextPage, fetchNextPage, isFetchingNextPage } = postQueries.useGetPostInfinityQuery({ limit, page });
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -29,41 +31,23 @@ export default function Home() {
     }
   }
 
-  useEffect(() => {
-    if (data !== undefined) {
-      setPosts(data);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isRefetching && data !== undefined) {
-      setPosts(
-        (prev: postSchemas.Post[]) => {
-          const newState = [...new Map(prev.concat(data).map((m) => [m.id, m])).values()];
-          return newState;
-        }
-      );
-    }
-  }, [isRefetching]);
-
   function fetchPosts() {
-    if (!isLoading) {
       setLimit((prev) => {
-        if (prev + 6 <= 100) {
-          return prev + 6;
-        } else {
-          return 100 - prev;
-        }
+        if(prev + 6 >= 100 ) return 100;
+        return prev + 6;
       });
-    }
   }
+
+  if(!data) return null;
+
+  const { pages } = data;
 
   return (
     <main className={scss.container}>
-      {posts.map((post, i) => (
+      {pages.flat().map((post, i) => (
         <PostCard key={post.id} odd={i % 2 === 0} {...post} />
       ))}
-      { isFetching && <div className={scss.loader}><Oval 
+      { isFetchingNextPage && <div className={scss.loader}><Oval 
       height={80}
       width={80}
       color="rgba(241, 161, 10, 1)"
