@@ -29,8 +29,6 @@ export default function Home() {
     }
   }
 
-  useEffect(() => {console.log(isLoading)},[isLoading]);
-  useEffect(() => {console.log(isFetching)},[isFetching]);
   useEffect(() => {
     if (data !== undefined) {
       setPosts(data);

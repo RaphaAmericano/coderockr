@@ -62,6 +62,24 @@
         margin: 0 40px 48px 0;
     }
     @media screen and (max-width: $tablet) {
+        flex-basis: 100%;
+        &:nth-child(3n + 3){
+            flex-basis: 100%;
+            height: 320px;
+            .imageBlock {
+                flex-basis: 320px;
+                img {
+                    width: 320px;
+                    height: 320px;
+                }
+            }
+            .textBlock {
+                padding: 35px 0 48px 0;
+            }
+            &.odd {
+                margin-left: unset;
+            }
+        }
         .imageBlock {
             flex-basis: 100px;
         }
@@ -78,8 +96,6 @@
             }
         }
         .actionBlock {
-            flex-basis: 100%;
-            flex-direction: row;
             margin: 0 20px 20px 0;
         }
     }
