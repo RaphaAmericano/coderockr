@@ -7,7 +7,6 @@ type IProps = postSchemas.Post & { odd: boolean};
 
 export default function PostCard(props: IProps){
     const { author, title, article, id, imageUrl, odd } = props;
-    console.log(odd);
     function resumeArticle(article: string){
         return article.split("</p>")[0].replace("<p>", "");
     }

@@ -3,6 +3,7 @@
 .postCard {
     &:nth-child(3n + 3){
         flex-basis: 1280px; 
+        height: 640px;
         .imageBlock {
             flex-basis: 640px;
             img {
@@ -10,14 +11,14 @@
                 height: 640px;
             }
         }
+        .textBlock {
+            padding: 163px 0 172px 0;
+        }
         &.odd {
             margin-left: auto;
         }
     }
-    &:nth-child(even){
-        
-    }
-    min-height: 320px;
+    height: 320px;
     flex-basis: 50%;
     display: flex;
     background-color: $light-color;
@@ -32,7 +33,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        padding: 35px 0 10px 0;
+        padding: 35px 0 48px 0;
         margin: 0 0 0 80px;
         span {
             color: $dark-color;
@@ -58,7 +59,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        margin: 0 40px 0 0;
+        margin: 0 40px 48px 0;
     }
     @media screen and (max-width: $tablet) {
         .imageBlock {
