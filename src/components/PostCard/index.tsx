@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { postSchemas } from "../../api/schemes";
+import { stringHelpers } from "../../helpers/index";
 import scss from "./style.module.scss";
 import arrow from "../../assets/icons/link_arrow.svg";
 import cln from "classnames";
@@ -10,6 +11,7 @@ export default function PostCard(props: IProps){
     function resumeArticle(article: string){
         return article.split("</p>")[0].replace("<p>", "");
     }
+    
     const classNameList = [scss.postCard, (odd && scss.odd ) ];
 
     return  <div className={cln(classNameList)}>
@@ -18,7 +20,7 @@ export default function PostCard(props: IProps){
                 </div>
                 <div className={scss.textBlock}>
                     <span>{author}</span>
-                    <h3>{title}</h3>
+                    <h3>{stringHelpers.cleanString(title, "<img")}</h3>
                     <p>{resumeArticle(article)}</p>
                 </div>
                 <div className={scss.actionBlock}>
