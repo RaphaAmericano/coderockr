@@ -41,8 +41,11 @@
         @media screen and (max-width: $mobile-large) {
             min-width: 160px;
         }
-        @media screen and (max-width: $tablet) {
+        @media screen and (max-width: $tablet-large) {
             gap: 0 15px;
+        }
+        @media screen and (min-width: $tablet-large) and (max-width: $desktop) {
+            gap: 0 25px;
         }
         li {
 
