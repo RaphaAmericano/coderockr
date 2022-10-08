@@ -9,6 +9,7 @@ import { useStores } from "./stores";
 // Pages
 const Home = lazy(async () => import("./pages/Home"));
 const Post = lazy(async () => import("./pages/Post"));
+const NewPost = lazy(async () => import("./pages/NewPost"));
 
 function App() {
 
@@ -19,7 +20,11 @@ function App() {
     openModal();
     setChildren(<ContactFormContainer />);
   }
-  const menu = [{ to: "/", text: "Posts", isLink: true }, { text: "Contact", clickFn: openContactModal }]
+  const menu = [
+    { to: "/", text: "Posts", isLink: true }, 
+    { text: "Contact", clickFn: openContactModal },
+    { to: "/post/new", text: "New Post", isLink: true, altBg: true }, 
+  ]
   return (
     <>
       <Header title={"Rockr Blog"} menu={menu}/>
@@ -27,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/post/:id" element={<Post />} />
+          <Route path="/post/new" element={<NewPost />} />
           <Route path="*" element={ <Navigate to="/login" /> } />
         </Routes>
       </Suspense>

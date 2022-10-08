@@ -47,6 +47,9 @@
                 @media screen and (max-width: $mobile-large) {
                     font-size: 18px;
                 }
+                &.altBg {
+                    background-color: $primary-color;
+                }
             }
             a.navItem {
                 text-decoration: none;
