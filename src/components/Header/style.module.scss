@@ -19,6 +19,7 @@
             line-height: 42.66px;
         }
         @media screen and (max-width: $mobile-large) {
+            // justify-content: flex-start;
             .heading {
                 font-size: 24px;
             }
@@ -29,14 +30,19 @@
     }
 }
 .nav {
+    
     ul {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
         line-height: 38px;
         min-width: 318px;
+        gap: 0 117px;
         @media screen and (max-width: $mobile-large) {
             min-width: 160px;
+        }
+        @media screen and (max-width: $tablet) {
+            gap: 0 15px;
         }
         li {
 
@@ -49,6 +55,11 @@
                 }
                 &.altBg {
                     background-color: $primary-color;
+                    padding: 13px 35px;
+                    border-radius: 70px;
+                    @media screen and (max-width: $tablet) {
+                        padding: 3px 15px;
+                    }
                 }
             }
             a.navItem {
