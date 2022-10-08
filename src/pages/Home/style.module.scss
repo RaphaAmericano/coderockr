@@ -6,11 +6,11 @@
     gap: 80px 0;
     padding: 60px 0;
     @media screen and (max-width: $tablet) {
-        padding: 15px;
-        gap: 15px 0;
+        padding: 115px 15px 15px;
+        gap: 60px 0;
     }
     @media screen and (min-width: $tablet) and (max-width: $tablet-large){
-        padding: 60px ;
+        padding: 160px 60px 60px 60px ;
     }
     .loader {
         flex-basis: 100%;

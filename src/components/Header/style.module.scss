@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     background-color: $dark-color;
+    position: fixed;
     .container {
         @include container;
         height: 100px;
