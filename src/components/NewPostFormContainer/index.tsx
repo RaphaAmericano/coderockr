@@ -3,7 +3,6 @@ import photoPlaceholder from "../../assets/new_post_photo_placeholder.png";
 import { NewPostForm } from "../NewPostForm";
 import { useEffect, useState } from "react";
 import { useDebouce } from "../../hooks/useDebounce";
-import { imageQueries } from "../../hooks/queries";
 
 export function NewPostFormContainer() {
 

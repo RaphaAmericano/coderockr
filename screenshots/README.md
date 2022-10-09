@@ -9,3 +9,7 @@
 ## Post
 
 ![Contact](https://github.com//RaphaAmericano/coderockr/blob/development/screenshots/screenshot-post.png?raw=true)
+
+## New Post
+
+![Contact](https://github.com//RaphaAmericano/coderockr/blob/development/screenshots/screenshot-new-post.png?raw=true)
