@@ -5,10 +5,11 @@ import pencil from "./../../assets/icons/pencil_icon.svg";
 import { IFields, useNewPostForm } from "./newPostFormHook";
 import { useEffect } from "react";
 import { postQueries } from "../../hooks/queries";
-import { usePostNewPost } from "../../hooks/queries/post";
+
 interface IProps {
   updateImageFn: (url: string) => void;
 }
+
 export function NewPostForm(props: IProps) {
   const { updateImageFn } = props;
   const newPostForm = useNewPostForm();
@@ -32,10 +33,9 @@ export function NewPostForm(props: IProps) {
   async function onSubmit(data: IFields) {
     console.log(data);
     try {
-      
       const post = await useNewPost.mutateAsync(data);
       if(isSuccess){
-        reset()
+        reset();
       }
     } catch (error) {
       const { status } = error as { status: number };

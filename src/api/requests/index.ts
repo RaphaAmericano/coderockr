@@ -1,3 +1,4 @@
 import * as postRequests from "./post";
+import * as contactRequest from "./contact";
 
-export { postRequests } ;
+export { postRequests, contactRequest } ;

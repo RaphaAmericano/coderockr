@@ -16,7 +16,10 @@ export function ContactForm() {
   async function onSubmit(data: IFields) {
     console.log(data);
     try {
-      const { email, name, phone, post } = data;
+      const contact = await usePostContact.mutateAsync(data);
+      if(isSuccess){
+        reset();
+      }
       setTimeout(() => {
         reset();
       }, 5000);
