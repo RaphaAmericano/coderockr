@@ -17,6 +17,7 @@ export function ContactForm() {
     console.log(data);
     try {
       const contact = await usePostContact.mutateAsync(data);
+      console.log(contact);
       if(isSuccess){
         reset();
       }
