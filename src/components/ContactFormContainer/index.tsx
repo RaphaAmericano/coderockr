@@ -1,7 +1,8 @@
-import { ContactForm } from "../ContactForm";
 import scss from "./style.module.scss";
 import closeIcon from "./../../assets/icons/close_icon.svg";
 import { useStores } from "../../stores";
+import { ContactForm } from "../ContactForm";
+;
 export function ContactFormContainer(){
     const { modalStore } = useStores();
     const { closeModal } = modalStore;

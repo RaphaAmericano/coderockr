@@ -1,6 +1,7 @@
 import { postSchemas } from "../schemes";
 
-import service from "../service";
+import service, { testApiService } from "../service";
+
 
 export async function getPosts(params: postSchemas.PostRequest){
     const { limit, page } = params;
@@ -9,4 +10,8 @@ export async function getPosts(params: postSchemas.PostRequest){
                             (limit && !page )? `?_limit=${limit}` : "";
     
     return service.get<never, postSchemas.PostResponse>(`/articles${paramsStrings}`);
+}
+
+export async function postPost(params: postSchemas.PostNewPostRequestParams){
+    return testApiService.post<never, postSchemas.PostNewPostResponse>("/post", {...params })
 }

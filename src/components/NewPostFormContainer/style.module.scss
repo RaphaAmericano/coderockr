@@ -1,0 +1,30 @@
+@import "./../../assets/styles/variables";
+.content {
+    background-color: $light-color;
+    padding: 52px 52px;
+    width: 810px;
+    .closeContent {
+        display: flex;
+        justify-content: flex-end;
+        img {
+            width: 28px;
+            height: 28px;
+        }
+    }
+    .photo {
+        display: flex;
+        justify-content: center;
+    }
+    @media screen and (max-width: $tablet) {
+        width: 100vw;
+    }
+}
+.heading {
+    margin: 78px 0 47px 0;
+    h3 {
+        color: $primary-color;
+        text-align: center;
+        font-size: 36px;
+        line-height: 42.66px;
+    }
+}

@@ -1,2 +1,5 @@
 import * as postSchemas from "./post";
-export { postSchemas };
+import * as contactSchemas from "./contact";
+import * as imageSchemas from "./image";
+
+export { postSchemas, contactSchemas, imageSchemas };

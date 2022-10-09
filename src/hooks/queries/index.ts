@@ -1,3 +1,4 @@
 import * as postQueries from "./post";
-
-export { postQueries }
+import * as contactQueries from "./contact";
+import * as imageQueries from "./image";
+export { postQueries, contactQueries, imageQueries }

@@ -1,0 +1,22 @@
+@import "./../../assets/styles/variables";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 48px 0;
+    button {
+        background-color: $dark-color;
+        color: $light-color;
+        width: fit-content;
+        align-self: center;
+        padding: 21px 36px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+        img {
+            width: 21px;
+            height: 18px;
+            margin-right: 39px;
+        }
+    }
+}

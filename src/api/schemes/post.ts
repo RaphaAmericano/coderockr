@@ -17,4 +17,16 @@ interface PostResponseItem extends Omit<Post, "date" | "article" > {
     article: string;
 }
 
+export interface PostNewPostRequestParams extends Omit<Post, "id" | "authorEmail" | "article" | "date" >{
+    post: string;
+}
+
+export interface PostNewPostResponse {
+    args: object;
+    data: string;
+    files: object;
+    form: object;
+    json: PostNewPostRequestParams
+}
+
 export type PostResponse = PostResponseItem[];

@@ -26,6 +26,7 @@ jobs:
       run: npm run build
       env:
         VITE_API_URL: ${{ secrets.VITE_API_URL }}
+        VITE_TEST_REQUEST_URL: ${{ secrets.VITE_TEST_REQUEST_URL }}
     
     - name: Run tests
       run: npm run test
