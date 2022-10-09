@@ -11,15 +11,17 @@ export interface IProps {
   error?: FieldError;
   touched?: boolean;
   register: UseFormRegisterReturn;
+  disabled: boolean;
 }
 
 export function TextInput(props: IProps) {
-  const { label, type, name, error, touched, placeholder, register } = props;
+  const { label, type, name, error, touched, placeholder, register, disabled } = props;
 
   return (
     <div className={scss.textInput}>
       {label && <label>{label}</label>}
       <input
+        disabled={disabled}
         type={type}
         placeholder={placeholder}
         {...register}

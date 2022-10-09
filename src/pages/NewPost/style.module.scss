@@ -14,6 +14,8 @@
     @include container;
     background-color: $light-color;
     margin: 100px 0;
+    display: flex;
+    justify-content: center;
     @media screen and (max-width: $mobile-large ) {
         margin: 15px 0;
     }

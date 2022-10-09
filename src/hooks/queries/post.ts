@@ -1,4 +1,4 @@
-import { InfiniteData, useInfiniteQuery, useQuery } from "react-query";
+import { InfiniteData, useInfiniteQuery, useMutation, useQuery } from "react-query";
 import { postRequests } from "../../api/requests";
 import { postSchemas } from "../../api/schemes";
 
@@ -32,4 +32,12 @@ export function useGetPostInfinityQuery(params?: postSchemas.PostRequest) {
   });
 
   return inifinyQuery;
+}
+
+export function usePostNewPost(){
+  const mutation = useMutation<unknown, unknown, postSchemas.PostNewPostRequestParams>(
+    postRequests.postPost
+  );
+
+  return mutation;
 }

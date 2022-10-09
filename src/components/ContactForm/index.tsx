@@ -3,8 +3,8 @@ import { IFields, useContactForm } from "./contactFormHook";
 import scss from "./style.module.scss";
 import submitArrow from "./../../assets/icons/submit_arrow.svg";
 import { TextareaInput } from "../TextareaInput";
-import { ChangeEvent, EventHandler } from "react";
-import { maskHelpers } from "./../../helpers/index"
+import { ChangeEvent } from "react";
+import { maskHelpers } from "./../../helpers/index";
 
 export function ContactForm() {
   const contactForm = useContactForm();
@@ -77,7 +77,7 @@ export function ContactForm() {
         rows={11}
         name="post"
         label="Post"
-        error={errors.name}
+        error={errors.post}
         touched={touchedFields.post}
         register={{ ...register("post") }}
         placeholder={
