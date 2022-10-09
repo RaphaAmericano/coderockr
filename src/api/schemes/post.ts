@@ -21,7 +21,7 @@ export interface PostNewPostRequestParams extends Omit<Post, "id" | "authorEmail
     post: string;
 }
 
-export interface PostNewPostResponse extends Omit<Post, "id" | "authorEmail" | "article" | "date" >{
+export interface PostNewPostResponse {
     args: object;
     data: string;
     files: object;

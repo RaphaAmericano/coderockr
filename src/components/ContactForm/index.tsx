@@ -5,11 +5,14 @@ import submitArrow from "./../../assets/icons/submit_arrow.svg";
 import { TextareaInput } from "../TextareaInput";
 import { ChangeEvent } from "react";
 import { maskHelpers } from "./../../helpers/index";
-
+import { contactQueries } from "../../hooks/queries";
 export function ContactForm() {
   const contactForm = useContactForm();
   const { errors, touchedFields, register, reset, setValue } = contactForm;
 
+  const usePostContact = contactQueries.usePostContact();
+  const { isLoading, isSuccess } = usePostContact;
+  
   async function onSubmit(data: IFields) {
     console.log(data);
     try {
@@ -37,6 +40,7 @@ export function ContactForm() {
       onSubmit={contactForm.handleSubmit(onSubmit, onError)}
     >
       <TextInput
+        disabled={isLoading}
         name="name"
         label="Name"
         type="text"
@@ -48,6 +52,7 @@ export function ContactForm() {
         }
       />
       <TextInput
+        disabled={isLoading}
         name="email"
         label="E-mail"
         type="email"
@@ -59,6 +64,7 @@ export function ContactForm() {
         }
       />
       <TextInput
+        disabled={isLoading}
         name="phone"
         label="Phone"
         type="text"
@@ -74,6 +80,7 @@ export function ContactForm() {
         }
       />
       <TextareaInput
+        disabled={isLoading}
         rows={11}
         name="post"
         label="Post"
